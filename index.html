@@ -22,24 +22,30 @@
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
+    /* Clase para bordes azules en la tabla */
+    .blue-border-table th,
+    .blue-border-table td {
+      border: 1px solid blue;
+    }
   </style>
 </head>
 <body>
     <div class="container mt-5">
-        <button type=" onclick" class=" btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover">Lista de Usuarios</button>
+        <!-- Botón para recargar la página -->
+    <button type="button" class="btn btn-secondary mb-3" onclick="window.location.reload();">Lista de Usuarios</button>
         
         
         <!-- Loader -->
-        <div id="loader" class="text-center">
+        <div class= "loader" id="loader">
             <div class="spinner-border text-primary" role="status">
                 <span class="sr-only">Cargando...</span>
             </div>
-            <p>Cargando...</p>
         </div>
         
     <h1 class="my-4">Datos de Usuario</h1> <!-- Tabla de usuarios  -->
+
     <div class="loader" id="loader"></div>
-    <table class="table table-responsive table-bordered mt-4">
+    <table class="table table-responsive table-bordered mt-4 blue-border-table ">
       <thead>
         <tr>
           <th>ID</th>

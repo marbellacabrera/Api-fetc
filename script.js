@@ -28,6 +28,9 @@ document.addEventListener("DOMContentLoaded", function() {
           
           userTableBody.appendChild(row);
         });
+        //Clase para bordes azules de la tabla
+        const table = document.querySelector('.table');
+        table.classList.add('blue-border-table');
       })
       .catch(error => {
         console.error("Error fetching data:", error);
